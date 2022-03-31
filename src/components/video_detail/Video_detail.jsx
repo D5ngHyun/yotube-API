@@ -2,7 +2,6 @@ import React from 'react';
 import styles from './video_detail.module.css';
 
 function Video_detail({ video, video: { snippet } }) {
-  console.log(video, snippet);
   return (
     <section className={styles.detail}>
       <iframe

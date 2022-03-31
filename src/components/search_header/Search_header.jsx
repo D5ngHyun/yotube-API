@@ -2,6 +2,8 @@ import React from 'react';
 import styles from './search_header.module.css';
 
 function Search_header({ onSearch }) {
+  console.log('serach Header');
+
   const inputRef = React.useRef();
 
   const handleSearch = () => {
@@ -44,4 +46,4 @@ function Search_header({ onSearch }) {
   );
 }
 
-export default Search_header;
+export default React.memo(Search_header);

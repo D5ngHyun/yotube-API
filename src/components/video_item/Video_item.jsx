@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { memo } from 'react';
 import styles from './Video_item.module.css';
 
-function Video_item({ video, onVideoClick, display }) {
-  // console.log(video);
+const Video_item = memo(({ video, onVideoClick, display }) => {
   const displayType = display === 'list' ? styles.list : styles.grid;
   const { snippet } = video;
+
+  console.log('video Item');
 
   return (
     <li
@@ -24,6 +25,6 @@ function Video_item({ video, onVideoClick, display }) {
       </div>
     </li>
   );
-}
+});
 
 export default Video_item;
